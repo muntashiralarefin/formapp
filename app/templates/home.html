@@ -1,0 +1,16 @@
+<h1> Form Development </h1>
+
+<br><br>
+{% if submitted %}
+    <h2>Submitted successfully !</h2>
+{% else %}
+    <form action="" method=POST>
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+{% endif %}
+
+
+
